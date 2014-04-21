@@ -16,8 +16,10 @@ int main (int argc,char** argv)
 	const char* val1="NewPointer";
 	constVal=val;
 	//*constVal="Cannot do this";
+	char stack[]="On stack";
 	strcpy(constPtr,val1);
-	printf("%s\n%s\n%s\n",constPtr,constVal,constPtr1);
+	strcpy(stack,"No stack");	
+	printf("%s\n%s\n%s\n%s\n",constPtr,constVal,constPtr1,stack);
 	free(constPtr);
 	return 0;
 }
